@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Swal from 'sweetalert2';
 import { activatedLogs, deactivateLogs, controlDate } from '../../Engine/index';
 import { IntButton, DesButton } from '../Button/index';
+
+import api from '../../Services/API/index';
 
 //iniciador
 let timer;
@@ -89,7 +90,7 @@ export default function Integrador() {
                     });
 
                     try {
-                        axios.get('http://localhost:3002/integra')
+                        api.get('/integra')
                             .then(res => {
                                 if (res.status === 200) {
 

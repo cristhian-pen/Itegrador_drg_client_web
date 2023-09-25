@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from '../../Services/API/index';
 
 //Handlers de error
 import { ServerError, ServerOK, ServerSearch } from "./statusServer/errorStatus";
@@ -12,7 +12,7 @@ export default function CheckServer() {
 
     //Validaçao do servidor
     useEffect(() => {
-        axios.get('http://localhost:3002/')
+        api.get('/')
             .then(res => {
                 if (res.status === 200) {
                     setStatus(<ServerOK />);

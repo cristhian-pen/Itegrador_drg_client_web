@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useState } from "react";
 import Navbar from "../Navbar";
-import axios from "axios";
+import api from '../../Services/API/index';
 
 
 export default function Logs() {
@@ -8,7 +8,7 @@ export default function Logs() {
 
     useLayoutEffect(() => {
 
-        axios.get('http://localhost:3002/logsExecucao')
+        api.get('/logsExecucao')
             .then(res => {
                 setData(res.data.info);
             })
