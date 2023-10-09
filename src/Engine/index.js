@@ -11,6 +11,16 @@ const deactivateLogs = () => {
     api.post(`/logs/${negativeMessage}`);
 }
 
+const manualIntegraLogs = () => {
+    const manualIntegraLogs = 'Aplicação integrada manualmente em: ' + date;
+    api.post(`/logs/${manualIntegraLogs}`);
+}
+
+const deletaIntegraLogs = () => {
+    const deletaIntegraLogs = 'Dados deletados em: ' + date;
+    api.post(`/logs/${deletaIntegraLogs}`);
+}
+
 const controlDate = () => {
 
     const data = new Date().getHours() + ':' + new Date().getUTCMinutes();
@@ -30,4 +40,4 @@ const controlDate = () => {
     }
 }
 
-export { activatedLogs, deactivateLogs, controlDate };
+export { activatedLogs, deactivateLogs, controlDate, manualIntegraLogs, deletaIntegraLogs };

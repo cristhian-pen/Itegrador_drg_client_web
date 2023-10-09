@@ -1,7 +1,8 @@
 import React from "react";
 import searchAnimation from './loading_animation.json';
-import darkmode_animation from '../animations/darkmode_animation.json';
-import notfound_animation from '../animations/notfound_animation.json';
+import darkmode_animation from './darkmode_animation.json';
+import notfound_animation from './notfound_animation.json';
+import questionInformation from './question_information.json';
 
 import Lottie from 'react-lottie';
 
@@ -30,6 +31,35 @@ export const AnimSearch = () => {
         </div>
     );
 }
+
+export const QuestionInformation = () => {
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: questionInformation,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
+
+    return (
+        <div>
+            <Lottie
+                options={defaultOptions}
+                height={15}
+                width={15}
+                isStopped={true}
+                isPaused={true}
+                isClickToPauseDisabled={false}
+                speed={1}
+            >
+            </Lottie>
+        </div>
+    );
+}
+
+
 
 export default function NFound() {
 
@@ -84,5 +114,6 @@ export const DarkMode = ({ isStopped, isPaused, direction }) => {
         </div>
     );
 }
+
 
 

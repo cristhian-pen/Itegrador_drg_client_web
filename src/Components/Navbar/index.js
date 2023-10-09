@@ -78,8 +78,10 @@ export default function Navbar() {
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 <a href="/" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Home</a>
+                                <a href="/options" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Importação Manual</a>
+                                <a href="/delete" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Deletar Integração</a>
                                 <a href="/logs" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Logs da aplicação</a>
-                                <a href="/contato" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Contato de Suporte</a>
+                                <a href="/contact" className={` ${bgstate.hover} ${bgstate.titleHover} rounded-md px-3 py-2 text-sm font-medium ${bgstate.title}`}>Contato de Suporte</a>
                             </div>
                         </div>
                     </div>
@@ -98,8 +100,10 @@ export default function Navbar() {
             <div className="sm:hidden" id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
                     <a href="/" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Home</a>
+                    <a href="/options" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Importação Manual</a>
                     <a href="logs" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Logs da Aplicação</a>
-                    <a href="/contato" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Contato de Suporte</a>
+                    <a href="/delete" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Deletar Integração</a>
+                    <a href="/contacts" className={` ${bgstate.hover} ${bgstate.titleHover} block rounded-md px-3 py-2 text-base font-medium ${bgstate.title}`}>Contato de Suporte</a>
                 </div>
             </div>
         </nav>

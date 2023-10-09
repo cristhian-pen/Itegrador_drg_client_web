@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar";
+import Footer from '../Footer/index';
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 
@@ -78,6 +79,7 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </section>
         </>
     );
