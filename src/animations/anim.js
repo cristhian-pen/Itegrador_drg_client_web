@@ -35,7 +35,7 @@ export const AnimSearch = () => {
 export const QuestionInformation = () => {
 
     const defaultOptions = {
-        loop: true,
+        loop: false,
         autoplay: true,
         animationData: questionInformation,
         rendererSettings: {

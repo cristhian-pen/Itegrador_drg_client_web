@@ -6,24 +6,21 @@ import { QuestionInformation } from '../../animations/anim';
 import Swal from "sweetalert2";
 
 
-
-
 export default function ManualImport() {
     const [data, setData] = useState({ dateIni: '', dateFin: '', pages: '' });
-    //const [valid, setValid] = useState('border-gray-300');
 
     const handleForm = e => {
         setData({
             ...data,
             [e.target.name]: e.target.value
         });
-    }
 
+    }
     const showInfo = () => {
         Swal.fire({
             title: 'Informações!',
             text: 'O campo página e direcionado ao numero da pagina que sera enviado, este numero deverá ser de 1 a 5 e cada importação carregará 1 numero de página apenas.',
-        })
+        });
     }
 
     const showInfoDate = () => {
